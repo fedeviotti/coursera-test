@@ -21,7 +21,11 @@ function LunchCheckController($scope, $filter) {
       //filter to do NOT consider and empty item towards to the count
       array = array.filter(function(n){ return n.trim() != "" });
       $scope.fontColor = "green";
-      if(array.length <= 3){
+      //in case of only commas
+      if (array.length == 0){
+        $scope.message = "Please enter data first";
+        $scope.fontColor = "red";
+      }else if(array.length <= 3){
         $scope.message = "Enjoy!";
       }else{
         $scope.message = "Too much!"
