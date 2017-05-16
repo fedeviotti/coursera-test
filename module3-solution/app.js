@@ -29,7 +29,7 @@ function NarrowItDownController(MenuSearchService) {
   searchCtrl.warning = ''
 
   searchCtrl.searchInMenu = function () {
-
+    searchCtrl.found = [];
     if (searchCtrl.searchTerm.trim() != ''){
       var promise = MenuSearchService.getMatchedMenuItems(searchCtrl.searchTerm);
 
