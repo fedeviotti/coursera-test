@@ -1,0 +1,17 @@
+<!-- Comma separated version -->
+<!-- <ul>
+  <li ng-repeat="item in found">
+    {{ item.name }} , {{ item.short_name }}, {{ item.description }}
+    <button ng-click="onRemove({index: $index});">Remove Item</button>
+  </li>
+</ul> -->
+
+<!-- Table version -->
+<table class="table-list">
+  <tr  ng-repeat="item in found">
+    <td class="td-list">{{ item.name }}</td>
+    <td class="td-list">{{ item.short_name }}</td>
+    <td class="td-list">{{ item.description }}</td>
+    <td class="td-list"><button ng-click="onRemove({index: $index});">Don't want this one!</button></td>
+  </tr>
+</table>

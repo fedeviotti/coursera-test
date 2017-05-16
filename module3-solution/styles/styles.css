@@ -9,6 +9,16 @@ input[type="text"] {
   float: left;
   margin-left: 10px;
 }
+.narrow-list {
+  float: left;
+}
+.table-list {
+  border-collapse:collapse;
+}
+.td-list{
+  border: 1px solid black;
+  padding: 5px 5px 5px 5px;
+}
 .loader {
   display: none;
   margin-left: 5px;
