@@ -1,0 +1,42 @@
+<div class="container" ng-show="myInfoCtrl.dishdetail == null">
+  <span>Not Signed Up Yet. <a ui-sref="public.form">Sign up Now!</a></span>
+</div>
+<div class="container" ng-show="myInfoCtrl.dishdetail != null">
+  <h1>My Info Page</h1>
+    <table class="table">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Phone number</th>
+      </tr>
+      <tr>
+        <td>{{ myInfoCtrl.user.firstname }}</td>
+        <td>{{ myInfoCtrl.user.lastname }}</td>
+        <td>{{ myInfoCtrl.user.email }}</td>
+        <td>{{ myInfoCtrl.user.phonenumber }}</td>
+      </tr>
+    </table>
+
+    <h3>My favourite dish is:</h3>
+    <!-- Name: {{myInfoCtrl.dishdetail.name}}
+    Name: {{myInfoCtrl.dishdetail.description}} -->
+    <div class="menu-item-tile col-md-6">
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="menu-item-photo">
+            <div>{{myInfoCtrl.dishdetail.short_name}}</div>
+            <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.dishdetail.short_name}}.jpg" alt="{{myInfoCtrl.dishdetail.name}}">
+          </div>
+          <div class="menu-item-price">
+            {{myInfoCtrl.dishdetail.price_small | currency}} <span> {{myInfoCtrl.dishdetail.small_portion_name}}</span>
+            {{myInfoCtrl.dishdetail.price_large | currency}} <span> {{myInfoCtrl.dishdetail.large_portion_name}}</span></div>
+        </div>
+        <div class="menu-item-description col-sm-7">
+          <h3 class="menu-item-title">{{myInfoCtrl.dishdetail.name}}</h3>
+          <p class="menu-item-details">{{myInfoCtrl.dishdetail.description}}</p>
+        </div>
+      </div>
+      <hr class="visible-xs">
+    </div>
+</div>
