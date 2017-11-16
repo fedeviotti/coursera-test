@@ -1,4 +1,4 @@
 # coursera-test
-Test repo for coursera!!
+Test repo for coursera!
 
-Seconda modifica
+Progetto usato per il corso di Angular su coursera
